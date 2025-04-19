@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Content-->
+    <color name="content_primary">#FFFFFF</color>
+    <color name="content_secondary">#C7C9CC</color>
+    <color name="content_tertiary">#D9D9D9</color>
+    <color name="content_brand">#C58DE7</color>
+    <color name="color_inverse">#030203</color>
+    <!-- Background-->
+    <color name="background_primary">#020202</color>
+    <color name="background_secondary">#111012</color>
+    <color name="background_tertiary">#24222E</color>
+    <color name="background_brand">#C58DE7</color>
+    <color name="background_gray">#3D3D3D</color>
+    <!-- Accent-->
+    <color name="accent_pink">#D586E0</color>
+    <color name="accent_blue">#91A1FA</color>
+    <color name="accent_green">#77C0A</color>
+    <color name="accent_lime">#D1DC97</color>
+    <color name="accent_red">#E9A9B3</color>
+    <!-- Gradient -->
+    <color name="gradient_border">#77C0AF</color>
+    <color name="gradient_background">#D586E0</color>
+    <color name="gradient_content">#C7C9CC</color>
+</resources>
