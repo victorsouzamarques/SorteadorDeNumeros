@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DrawResultFragment"
+    android:background="@color/background_primary">
+
+    <TextView
+        android:id="@+id/tvDrawTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:textAppearance="@style/TextAppearance.RobotoFlex.LabelMedium"
+        android:text="@string/resultado_do_sorteio"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDrawNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        tools:text="@string/primeiro_resultado"
+        android:textAlignment="center"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/content_secondary"
+        android:textAppearance="@style/TextAppearance.RobotoMono.Overline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDrawTitle" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flowResultNumberHelper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flow_horizontalGap="16dp"
+        app:flow_maxElementsWrap="3"
+        app:flow_wrapMode="chain"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDrawNumber"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

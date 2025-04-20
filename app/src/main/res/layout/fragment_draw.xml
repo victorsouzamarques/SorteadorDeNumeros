@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/background_primary"
+    tools:context=".DrawFragment">
+
+
+
+    <TextView
+        android:id="@+id/tvDrawTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:textAppearance="@style/TextAppearance.RobotoFlex.LabelMedium"
+        android:text="@string/draw_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_draw_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:text="@string/draw_text"
+        android:textAppearance="@style/TextAppearance.RobotoFlex.ParagraphMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDrawTitle" />
+
+<!--    <androidx.constraintlayout.helper.widget.Flow-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:constraint_referenced_ids="llDrawNumbers, llFromNumber, llUntilNumber"-->
+<!--        app:flow_wrapMode="chain"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvDrawText" />-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_draw_number">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvNpNumbers"
+                android:textColor="@color/content_secondary"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.RobotoFlex.LabelMedium"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp" />
+
+            <EditText
+                android:id="@+id/etAmountNumbers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:background="@drawable/bg_edittext"
+                android:textAppearance="@style/TextAppearance.Sora.DisplaySmall"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:padding="16dp"
+                android:inputType="number"/>
+            
+        </LinearLayout>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvNpFrom"
+                android:textColor="@color/content_secondary"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.RobotoFlex.LabelMedium"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp" />
+
+            <EditText
+                android:id="@+id/etInitialLimit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:background="@drawable/bg_edittext"
+                android:textAppearance="@style/TextAppearance.Sora.DisplaySmall"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:padding="16dp"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tvNpUntil"
+                android:textColor="@color/content_secondary"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.RobotoFlex.LabelMedium"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp" />
+
+            <EditText
+                android:id="@+id/etFinalLimit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:background="@drawable/bg_edittext"
+                android:textAppearance="@style/TextAppearance.Sora.DisplaySmall"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:padding="16dp"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/swtNotRepeatNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:thumbTint="@android:color/white"
+        app:trackDecorationTint="@android:color/transparent"
+        app:trackTint="@color/content_tertiary" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/tv_dont_repeat_number"
+        app:layout_constraintBottom_toBottomOf="@+id/swtNotRepeatNumbers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/swtNotRepeatNumbers"
+        app:layout_constraintTop_toTopOf="@+id/swtNotRepeatNumbers" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

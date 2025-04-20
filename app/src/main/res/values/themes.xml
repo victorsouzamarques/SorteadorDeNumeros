@@ -5,5 +5,7 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.SorteadorDeNumeros" parent="Base.Theme.SorteadorDeNumeros" />
+    <style name="Theme.SorteadorDeNumeros" parent="Base.Theme.SorteadorDeNumeros">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 </resources>
